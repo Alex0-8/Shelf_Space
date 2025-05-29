@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components'
+import Theme from './theme';
+import Header from './components/Header/index';
+import GlobalStyle from './theme/globalStyles';
+import HomePage from './components/HomePage';
+import { Route, Routes } from 'react-router-dom';
+import BookDetails from './components/BookDetails';
+import MyShefl from './components/MyShelf';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <div className='App'>
+        <Header />
+        <Routes>
+          
+          <Route path='/' element={<HomePage />} />
+          <Route path='/book/:id' element={<BookDetails />} />
+          <Route path='/shelf_space' element={<MyShefl />} />
+        </Routes>
+      </div>
+    </ThemeProvider>
   );
 }
 
