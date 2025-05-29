@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/Shelf_Space/static/js/main.b8955d37.js",
+    "main.js": "/Shelf_Space/static/js/main.eedef1ce.js",
     "static/media/loading5.gif": "/Shelf_Space/static/media/loading5.3f25f2979afa8ca164df.gif",
     "index.html": "/Shelf_Space/index.html",
-    "main.b8955d37.js.map": "/Shelf_Space/static/js/main.b8955d37.js.map"
+    "main.eedef1ce.js.map": "/Shelf_Space/static/js/main.eedef1ce.js.map"
   },
   "entrypoints": [
-    "static/js/main.b8955d37.js"
+    "static/js/main.eedef1ce.js"
   ]
 }
