@@ -1,3 +1,11 @@
+ShelfSpace -Is a responsive web app for searching books and managing a personal library. Users can search for books (API consumption), tag titles as favorite, reading, read, to-read, etc., and view their personal collection through a simple UI.
+
+**Features**
+- Book search via an external API.
+- Add/edit book status in a personal library.
+- Responsive UI for mobile and desktop.
+- Basic error handling and test setup.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
