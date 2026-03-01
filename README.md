@@ -26,9 +26,15 @@
 
 Funcionando como un gestor personal de biblioteca: buscas libros (obteniendo datos de una base de datos libre en línea), los agregas a tu lista con etiquetas como "Leyendo ahora", "Favorito", "Leído" o "Por leer", y navegas tu colección en cualquier momento.
 
-🔗 **Demo en vivo** → [https://alex0-8.github.io/Shelf_Space/](https://alex0-8.github.io/Shelf_Space/)
+🔗 **Demo en vivo** → [Shelf Space](https://alex0-8.github.io/Shelf_Space/)
 
 *(Consejo: busca un libro como "Harry Potter" para ver cómo funciona. Tu lista se guarda automáticamente en el dispositivo.)*
+
+<div align="center">
+  <img width="300" alt="ShelfSpace_MyShelf" src="https://github.com/user-attachments/assets/9983f8b7-325e-4088-af4e-7de859767c70" />
+  
+  <img width="500" alt="ShelfSpace_Home" src="https://github.com/user-attachments/assets/31811885-f6bf-4aa5-9f42-b0920389bf47" />
+</div>
 
 ---
 
@@ -147,9 +153,15 @@ Siéntete libre de usar, modificar y aprender de este proyecto.
 
 Working like a personal library manager: search for books (fetching data from a public online database), add them to your list with labels like "Reading now", "Favorite", "Read" or "To-Read", and browse your collection anytime.
 
-🔗 **Live demo** → [https://alex0-8.github.io/Shelf_Space/](https://alex0-8.github.io/Shelf_Space/)
+🔗 **Live demo** → [Shelf Space](https://alex0-8.github.io/Shelf_Space/)
 
 *(Tip: search for a book such as "Harry Potter" to see it in action. Your list saves automatically in the device.)*
+
+<div align="center">
+  <img width="300" alt="ShelfSpace_MyShelf" src="https://github.com/user-attachments/assets/9983f8b7-325e-4088-af4e-7de859767c70" />
+  
+  <img width="500" alt="ShelfSpace_Home" src="https://github.com/user-attachments/assets/31811885-f6bf-4aa5-9f42-b0920389bf47" />
+</div>
 
 ---
 
