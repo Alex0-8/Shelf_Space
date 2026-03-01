@@ -1,43 +1,252 @@
-# Shelf Space 📚
+[English Version](#english)
 
-**Shelf Space** is a fun, easy-to-use web app that helps you discover books and keep track of your reading journey. Imagine having your own digital bookshelf where you can search for any book, mark if you're reading it, loved it, or want to read it later—all from your phone or computer!
+# 📚 Shelf Space – Biblioteca Digital
 
-It's like a personal library manager: Search for books (pulling info from a big online book database), add them to your list with tags like "Reading Now," "Favorite," "Read," or "To-Read," and browse your collection anytime.
+<div align="center">
+  <a href="https://react.dev/">
+    <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=flat-square" alt="React" />
+  </a>
+  <a href="https://redux.js.org/">
+    <img src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=flat-square" alt="Redux" />
+  </a>
+  <a href="https://styled-components.com/">
+    <img src="https://img.shields.io/badge/Styled%20Components-DB7093?logo=styled-components&logoColor=white&style=flat-square" alt="Styled Components" />
+  </a>
+  <a href="https://testing-library.com/">
+    <img src="https://img.shields.io/badge/Jest%20%2B%20RTL-99424B?logo=jest&logoColor=white&style=flat-square" alt="Jest + RTL" />
+  </a>
+  <a href="https://alex0-8.github.io/Shelf_Space/">
+    <img src="https://img.shields.io/badge/Live%20Demo-brightgreen?logo=vercel&logoColor=white&style=flat-square" alt="Live demo" />
+  </a>
+</div>
 
-**Why I built it**: As a book lover, I wanted a simple way to organize my reads without complicated apps. It's responsive, so it looks great on mobile or desktop!
+---
 
-### Try It Live! 🚀
-Check out the working version here:  
-[🌟 Open Shelf Space](https://alex0-8.github.io/Shelf_Space/)
+**Shelf Space** es una aplicación web sencilla y agradable que te ayuda a descubrir libros y organizar tu viaje de lectura. Imagina tener una estantería digital donde puedes buscar cualquier título, marcar si lo estás leyendo, si te encantó o si quieres leerlo más adelante, todo desde tu teléfono o computadora.
 
-*(Tip: Search for a book like "Harry Potter" to see it in action! Your book list saves automatically on your device.)*
+Funcionando como un gestor personal de biblioteca: buscas libros (obteniendo datos de una base de datos libre en línea), los agregas a tu lista con etiquetas como "Leyendo ahora", "Favorito", "Leído" o "Por leer", y navegas tu colección en cualquier momento.
 
-### Key Features
-- **Book Search**: Type in a book title or author to find details like summaries, covers, and authors from a free online book database.
-- **Personal Library**: Add books to your shelf and tag them:
+🔗 **Demo en vivo** → [https://alex0-8.github.io/Shelf_Space/](https://alex0-8.github.io/Shelf_Space/)
+
+*(Consejo: busca un libro como "Harry Potter" para ver cómo funciona. Tu lista se guarda automáticamente en el dispositivo.)*
+
+---
+
+## ✨ Características principales
+
+- **Búsqueda de libros**: escribe un título o autor para obtener resumen, portadas y más desde una API pública
+- **Biblioteca personal**: agrega libros a tu estante y etiquétalos:
+  - 📖 Leyendo ahora
+  - ❤️ Favorito
+  - ✅ Leído
+  - ⏳ Por leer
+  - ¡y más!
+- **Gestión sencilla**: edita o elimina libros cuando quieras; la lista se mantiene aún cerrando el navegador
+- **Adaptable a móviles**: funciona bien en teléfonos, tablets y computadoras sin necesidad de hacer zoom
+- **Fiable y accesible**: maneja errores (libro no encontrado) y cuenta con pruebas para garantizar fluidez
+
+---
+
+## 🛠️ Stack Tecnológico
+
+| Categoría          | Tecnología / Herramienta                          | Notas                                      |
+|--------------------|---------------------------------------------------|--------------------------------------------|
+| Framework          | React                                         | Hooks + componentes funcionales            |
+| Estado             | Redux Toolkit                                     | Store centralizado y slices                |
+| Estilos            | styled-components                                | Tema central y estilos encapsulados       |
+| Formularios        | Manejados con componentes controlados            | Validación manual sencilla                 |
+| HTTP               | Axios                                             | Peticiones a API pública de libros        |
+| Routing            | React Router                                   | Navegación entre pantallas                 |
+| Testing            | Jest + React Testing Library + jest-dom           | Cobertura en lógica y componentes UI       |
+| Build & Deploy     | Create React App + gh-pages                       | Publicación automática en GitHub Pages     |
+
+---
+
+## 🔥 Retos enfrentados y cómo los resolví
+
+| Reto                                          | Solución aplicada                                                                 | Impacto / Aprendizaje                              |
+|-----------------------------------------------|-----------------------------------------------------------------------------------|----------------------------------------------------|
+| Integración con API de libros pública         | Configuré Axios con baseURL y manejo de errores; caché local en sessionStorage   | Respuestas rápidas y UX estable                    |
+| Sincronizar estado global con localStorage    | Usé middleware personalizado para guardar el store en cada cambio importante    | Persistencia automática sin librerías extras       |
+| Tests de flujos asíncronos                    | Simulé llamadas con jest.mock y user-event para interacciones completas         | Cobertura confiable del comportamiento real       |
+| Diseño responsive                             | Flexbox + media queries en styled-components, foco en mobile-first             | UI adaptable en todos los dispositivos             |
+| Manejo de rutas 404/estado no encontrado      | Implementé página de error y alertas sencillas                                 | Mejor feedback para búsquedas fallidas            |
+
+---
+
+## 🚀 Cómo empezar
+
+### 1. ¿Qué necesito tener instalado?
+
+- **Node.js** 16+  
+  → [Descargar](https://nodejs.org/)
+
+### 2. Pasos para verlo en tu computadora
+
+1. Clona el repositorio  
+   ```bash
+   git clone https://github.com/Alex0-8/Shelf_Space.git
+   cd Shelf_Space
+   ```
+2. Instala las dependencias
+   ```bash
+   npm install
+   ```
+3. Inicia la aplicación
+   ```bash
+   npm start
+   ```
+→ Se abrirá en http://localhost:3000 en tu navegador
+
+Comandos útiles
+
+```bash
+  # Desarrollo
+  npm start
+
+  # Pruebas interactivas
+  npm test
+
+  # Cobertura de tests
+  npm run test:coverage
+
+  # Generar build de producción
+  npm run build
+```
+---
+
+# 🛠️ Posibles futuras Mejoras
+
+- [ ] Mejorar el estilizado
+- [ ] Añadir animaciones suaves con framer motion
+
+---
+
+# 📄 Licencia
+Siéntete libre de usar, modificar y aprender de este proyecto.
+Última actualización importante: 1 de Marzo de 2026
+¡Gracias por visitar Shelf Space!
+
+---
+
+## English
+
+# 📚 Shelf Space – Digital Library
+
+<div align="center">
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=flat-square" alt="React" /></a>
+  <a href="https://redux.js.org/"><img src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=flat-square" alt="Redux" /></a>
+  <a href="https://styled-components.com/"><img src="https://img.shields.io/badge/Styled%20Components-DB7093?logo=styled-components&logoColor=white&style=flat-square" alt="Styled Components" /></a>
+  <a href="https://testing-library.com/"><img src="https://img.shields.io/badge/Jest%20%2B%20RTL-99424B?logo=jest&logoColor=white&style=flat-square" alt="Jest + RTL" /></a>
+  <a href="https://alex0-8.github.io/Shelf_Space/"><img src="https://img.shields.io/badge/Live%20Demo-brightgreen?logo=vercel&logoColor=white&style=flat-square" alt="Live demo" /></a>
+</div>
+
+---
+
+**Shelf Space** is a simple, pleasant web app that helps you discover books and organize your reading journey. Imagine having a digital shelf where you can search any title, mark if you're reading it, loved it, or want to read later—right from your phone or computer.
+
+Working like a personal library manager: search for books (fetching data from a public online database), add them to your list with labels like "Reading now", "Favorite", "Read" or "To-Read", and browse your collection anytime.
+
+🔗 **Live demo** → [https://alex0-8.github.io/Shelf_Space/](https://alex0-8.github.io/Shelf_Space/)
+
+*(Tip: search for a book such as "Harry Potter" to see it in action. Your list saves automatically in the device.)*
+
+---
+
+## ✨ Key Features
+
+- **Book search**: enter a title or author to get summaries, covers and more from a public API
+- **Personal library**: add books to your shelf and tag them:
   - 📖 Reading Now
   - ❤️ Favorite
   - ✅ Read
   - ⏳ To-Read
-  - And more!
-- **Easy Management**: Edit or remove books anytime. Your list stays saved even if you close the browser.
-- **Mobile-Friendly**: Works perfectly on phones, tablets, or computers—no zooming needed.
-- **Simple & Reliable**: Handles errors nicely (like if a book isn't found) and is tested to work smoothly.
+  - and more!
+- **Easy management**: edit or remove books whenever you like; list persists across sessions
+- **Mobile‑friendly**: works nicely on phones, tablets and desktops without zooming
+- **Reliable and accessible**: handles errors (book not found) and includes tests for smooth UX
 
-### How to Get Started (For Curious Users or Devs)
-This app was built with love using modern web tools, but you don't need to be a coder to enjoy it—just visit the live link above!
+---
 
-If you're techy and want to run it on your computer:
-1. **Clone the Project**: Download the code from GitHub.
-    - git clone https://github.com/Alex0-8/Shelf_Space.git
-    - cd Shelf_Space
-2. **Install Dependencies**: Run this in your terminal:
-    - npm install
-3. **Start the App**:
-    - npm start
-    - Open http://localhost:3000 in your browser.
+## 🛠️ Tech Stack
 
-<br>
+| Category          | Technology / Tool                          | Notes                                      |
+|-------------------|---------------------------------------------|--------------------------------------------|
+| Framework         | React                                   | Hooks + functional components              |
+| State             | Redux Toolkit                               | Central store and slices                   |
+| Styling           | styled-components                          | Central theme and encapsulated styles      |
+| Forms             | Controlled components                       | Simple manual validation                   |
+| HTTP              | Axios                                       | Requests to public book API                |
+| Routing           | React Router                             | Screen navigation                          |
+| Testing           | Jest + React Testing Library + jest-dom     | Coverage on logic and UI components        |
+| Build & Deploy    | Create React App + gh-pages                 | Auto-publish to GitHub Pages               |
 
-### About the Creator
-Hi, I'm Alexis—a Front-End Developer passionate about making useful apps. This was part of my EBAC Front-End Program (2024-2025). Check out my other projects on [GitHub](https://github.com/Alex0-8) or connect on [LinkedIn](https://www.linkedin.com/in/alexis-mendoza-developer-front-end/).
+---
+
+## 🔥 Challenges Faced and Solutions
+
+| Challenge                                   | Applied Solution                                                       | Impact / Learning                             |
+|---------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------|
+| Integrating with public books API           | Configured Axios with baseURL and error handling; local cache via sessionStorage | Faster responses and stable UX               |
+| Synchronizing global state with localStorage| Used custom middleware to persist store on key updates                | Automatic persistence without extra libraries|
+| Testing asynchronous flows                  | Mocked calls with jest.mock and user-event for complete interaction flows | Reliable coverage of real behavior           |
+| Responsive design                           | Flexbox + media queries inside styled-components, mobile-first focus  | UI adapts across all devices                  |
+| Handling 404/not-found states               | Implemented error page and simple alerts                              | Better feedback for failed searches          |
+
+---
+
+## 🚀 Getting Started (for beginners)
+
+### 1. What do I need installed?
+
+- **Node.js** 16+ (18+ recommended)  
+  → [Download](https://nodejs.org/)
+
+### 2. Steps to run it on your machine
+
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/Alex0-8/Shelf_Space.git
+   cd Shelf_Space
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Start the app
+   ```bash
+   npm start
+   ```
+→ It will open at http://localhost:3000
+
+Useful commands
+
+```bash
+  # Development
+  npm start
+
+  # Run tests
+  npm test
+
+  # View coverage
+  npm run test:coverage
+
+  # Build for production
+  npm run build
+
+  # Publish to GitHub Pages
+  npm run deploy
+```
+---
+
+# 🛠️ Possible Future Improvements
+
+- [ ] Improve styling
+- [ ] Add smooth animations with Framer Motion
+
+---
+
+# 📄 License
+Feel free to use, modify, and learn from this project.
+Last important update: 1 March 2026
+Thank you for visiting Shelf Space!
